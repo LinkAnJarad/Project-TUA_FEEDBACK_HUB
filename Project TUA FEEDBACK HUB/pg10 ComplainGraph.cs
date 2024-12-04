@@ -99,9 +99,10 @@ namespace Project_TUA_FEEDBACK_HUB
                 // Use parameterized queries to prevent SQL injection
                 //cmd.Parameters.AddWithValue("@owner_id", owner_id);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                pbSLCN.Value  = collegerec;
-                pbSLCN.Maximum = 10;
+                //pbSLCN.Value  = collegerec;
+                //pbSLCN.Maximum = 10;
                 MessageBox.Show(collegerec + "");
+            }
         }
     }
 }
