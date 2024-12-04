@@ -28,10 +28,22 @@ namespace Project_TUA_FEEDBACK_HUB
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pg6_AccountApproval accountApproval= new pg6_AccountApproval();
+            pg6_AccountApproval accountApproval = new pg6_AccountApproval();
             accountApproval.Show();
             this.Hide();
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Feedback_Form feedbackForm = new Feedback_Form();
+            feedbackForm.Show();
+            this.Hide();
+        }
+
+        private void pg9_ComplainList_Load(object sender, EventArgs e)
+        {
 
         }
     }

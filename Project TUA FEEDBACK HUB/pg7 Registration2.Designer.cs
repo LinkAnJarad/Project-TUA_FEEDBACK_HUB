@@ -40,35 +40,35 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
-            panel3 = new Panel();
+            comboBox1 = new ComboBox();
+            textBox9 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel5 = new Panel();
             label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            button1 = new Button();
+            panel3 = new Panel();
             button3 = new Button();
-            comboBox1 = new ComboBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             panel5.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -210,15 +210,160 @@
             panel2.Size = new Size(1573, 452);
             panel2.TabIndex = 6;
             // 
-            // panel3
+            // comboBox1
             // 
-            panel3.BackColor = Color.ForestGreen;
-            panel3.Controls.Add(button3);
-            panel3.Controls.Add(button1);
-            panel3.Location = new Point(-2, 557);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1435, 211);
-            panel3.TabIndex = 7;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(181, 198);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(228, 33);
+            comboBox1.TabIndex = 18;
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(1177, 318);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(281, 31);
+            textBox9.TabIndex = 17;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(597, 312);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(276, 31);
+            textBox8.TabIndex = 16;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(154, 306);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(255, 31);
+            textBox7.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(1177, 201);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(284, 31);
+            textBox6.TabIndex = 14;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(597, 192);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(276, 31);
+            textBox5.TabIndex = 13;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.Location = new Point(1018, 318);
+            label11.Name = "label11";
+            label11.Size = new Size(165, 25);
+            label11.TabIndex = 0;
+            label11.Text = "College / Program: ";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.Location = new Point(436, 312);
+            label10.Name = "label10";
+            label10.Size = new Size(157, 25);
+            label10.TabIndex = 11;
+            label10.Text = "Confirm Password:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BorderStyle = BorderStyle.FixedSingle;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.Location = new Point(52, 312);
+            label9.Name = "label9";
+            label9.Size = new Size(91, 27);
+            label9.TabIndex = 10;
+            label9.Text = "Password:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(1031, 201);
+            label8.Name = "label8";
+            label8.Size = new Size(148, 25);
+            label8.TabIndex = 9;
+            label8.Text = "Account Number:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.Location = new Point(436, 198);
+            label7.Name = "label7";
+            label7.Size = new Size(162, 25);
+            label7.TabIndex = 8;
+            label7.Text = "TUA Email Address:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.Location = new Point(52, 201);
+            label6.Name = "label6";
+            label6.Size = new Size(121, 25);
+            label6.TabIndex = 7;
+            label6.Text = "Account Type:";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(1133, 80);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(325, 31);
+            textBox3.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(565, 80);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(308, 31);
+            textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(154, 74);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(244, 31);
+            textBox1.TabIndex = 4;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1028, 83);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 25);
+            label5.TabIndex = 3;
+            label5.Text = "Last Name:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Location = new Point(436, 80);
+            label4.Name = "label4";
+            label4.Size = new Size(123, 25);
+            label4.TabIndex = 2;
+            label4.Text = "Middle Name:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(52, 74);
+            label3.Name = "label3";
+            label3.Size = new Size(107, 25);
+            label3.TabIndex = 1;
+            label3.Text = "First Name: ";
             // 
             // panel5
             // 
@@ -240,163 +385,15 @@
             label1.TabIndex = 0;
             label1.Text = "Registration Information ";
             // 
-            // label3
+            // panel3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(52, 74);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 25);
-            label3.TabIndex = 1;
-            label3.Text = "First Name: ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(436, 80);
-            label4.Name = "label4";
-            label4.Size = new Size(123, 25);
-            label4.TabIndex = 2;
-            label4.Text = "Middle Name:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(1028, 83);
-            label5.Name = "label5";
-            label5.Size = new Size(100, 25);
-            label5.TabIndex = 3;
-            label5.Text = "Last Name:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(154, 74);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(244, 31);
-            textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(565, 80);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(308, 31);
-            textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(1133, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(325, 31);
-            textBox3.TabIndex = 6;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(52, 201);
-            label6.Name = "label6";
-            label6.Size = new Size(121, 25);
-            label6.TabIndex = 7;
-            label6.Text = "Account Type:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.Location = new Point(436, 198);
-            label7.Name = "label7";
-            label7.Size = new Size(162, 25);
-            label7.TabIndex = 8;
-            label7.Text = "TUA Email Address:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(1031, 201);
-            label8.Name = "label8";
-            label8.Size = new Size(148, 25);
-            label8.TabIndex = 9;
-            label8.Text = "Account Number:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BorderStyle = BorderStyle.FixedSingle;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.Location = new Point(52, 312);
-            label9.Name = "label9";
-            label9.Size = new Size(91, 27);
-            label9.TabIndex = 10;
-            label9.Text = "Password:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(436, 312);
-            label10.Name = "label10";
-            label10.Size = new Size(157, 25);
-            label10.TabIndex = 11;
-            label10.Text = "Confirm Password:";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(1018, 318);
-            label11.Name = "label11";
-            label11.Size = new Size(165, 25);
-            label11.TabIndex = 0;
-            label11.Text = "College / Program: ";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(597, 192);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(276, 31);
-            textBox5.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(1177, 201);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(284, 31);
-            textBox6.TabIndex = 14;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(154, 306);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(255, 31);
-            textBox7.TabIndex = 15;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(597, 312);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(276, 31);
-            textBox8.TabIndex = 16;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(1177, 318);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(281, 31);
-            textBox9.TabIndex = 17;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.Desktop;
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(398, 18);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Approve ";
-            button1.UseVisualStyleBackColor = false;
+            panel3.BackColor = Color.ForestGreen;
+            panel3.Controls.Add(button3);
+            panel3.Controls.Add(button1);
+            panel3.Location = new Point(-2, 557);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1435, 211);
+            panel3.TabIndex = 7;
             // 
             // button3
             // 
@@ -409,13 +406,16 @@
             button3.Text = "Decline";
             button3.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // button1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(181, 198);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(228, 33);
-            comboBox1.TabIndex = 18;
+            button1.BackColor = SystemColors.Desktop;
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(398, 18);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 0;
+            button1.Text = "Approve ";
+            button1.UseVisualStyleBackColor = false;
             // 
             // pg7_Registration2
             // 
@@ -426,7 +426,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "pg7_Registration2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg7_Registration2";
+            Load += pg7_Registration2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -434,9 +436,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 

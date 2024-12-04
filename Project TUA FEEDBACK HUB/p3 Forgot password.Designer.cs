@@ -34,11 +34,11 @@
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
             panel2 = new Panel();
+            label4 = new Label();
             button1 = new Button();
             textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -97,6 +97,16 @@
             panel2.Size = new Size(1408, 427);
             panel2.TabIndex = 5;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Sitka Heading", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Location = new Point(415, 43);
+            label4.Name = "label4";
+            label4.Size = new Size(578, 32);
+            label4.TabIndex = 6;
+            label4.Text = "if you forgot your password , please enter your TUA Email";
+            // 
             // button1
             // 
             button1.BackColor = SystemColors.ControlText;
@@ -136,16 +146,6 @@
             label2.TabIndex = 0;
             label2.Text = "Forgot your password!";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Sitka Heading", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(415, 43);
-            label4.Name = "label4";
-            label4.Size = new Size(578, 32);
-            label4.TabIndex = 6;
-            label4.Text = "if you forgot your password , please enter your TUA Email";
-            // 
             // p3_Forgot_password
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -155,6 +155,7 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "p3_Forgot_password";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "p3_Forgot_password";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

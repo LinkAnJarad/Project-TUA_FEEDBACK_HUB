@@ -40,6 +40,7 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
             label1 = new Label();
             button5 = new Button();
             button4 = new Button();
@@ -52,17 +53,12 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel5.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,12 +91,12 @@
             // 
             linkLabel5.AutoSize = true;
             linkLabel5.LinkColor = Color.White;
-            linkLabel5.Location = new Point(1029, 16);
+            linkLabel5.Location = new Point(1011, 14);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(187, 25);
-            linkLabel5.TabIndex = 4;
+            linkLabel5.Size = new Size(205, 25);
+            linkLabel5.TabIndex = 5;
             linkLabel5.TabStop = true;
-            linkLabel5.Text = "Analytical Complaints ";
+            linkLabel5.Text = "College Complain Graph";
             // 
             // linkLabel4
             // 
@@ -183,23 +179,27 @@
             // 
             panel2.BackColor = Color.LightYellow;
             panel2.BackgroundImageLayout = ImageLayout.Center;
+            panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(panel5);
-            panel2.Controls.Add(tableLayoutPanel6);
-            panel2.Controls.Add(tableLayoutPanel5);
-            panel2.Controls.Add(tableLayoutPanel4);
-            panel2.Controls.Add(tableLayoutPanel3);
-            panel2.Controls.Add(tableLayoutPanel2);
-            panel2.Controls.Add(tableLayoutPanel1);
             panel2.ForeColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(-27, 118);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1513, 439);
+            panel2.Size = new Size(1498, 439);
             panel2.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(197, 162);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(910, 127);
+            dataGridView1.TabIndex = 13;
             // 
             // label1
             // 
@@ -253,6 +253,7 @@
             button1.TabIndex = 8;
             button1.Text = "OPEN";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel5
             // 
@@ -321,84 +322,6 @@
             label3.TabIndex = 8;
             label3.Text = "Name ";
             // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.ColumnCount = 2;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Location = new Point(795, 226);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 2;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(304, 63);
-            tableLayoutPanel6.TabIndex = 6;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Location = new Point(496, 226);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(300, 63);
-            tableLayoutPanel5.TabIndex = 5;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Location = new Point(199, 227);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(300, 62);
-            tableLayoutPanel4.TabIndex = 4;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Location = new Point(795, 156);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(304, 69);
-            tableLayoutPanel3.TabIndex = 3;
-            // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Location = new Point(496, 157);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(300, 68);
-            tableLayoutPanel2.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Location = new Point(198, 158);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(300, 67);
-            tableLayoutPanel1.TabIndex = 1;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.ForestGreen;
@@ -416,7 +339,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "pg9_ComplainList";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg9_ComplainList";
+            Load += pg9_ComplainList_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -424,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -433,7 +359,6 @@
 
         private Panel panel1;
         private Panel panel4;
-        private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
@@ -453,13 +378,9 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private TableLayoutPanel tableLayoutPanel6;
-        private TableLayoutPanel tableLayoutPanel5;
-        private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel3;
-        private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panel3;
         private Label label1;
+        private LinkLabel linkLabel5;
+        private DataGridView dataGridView1;
     }
 }

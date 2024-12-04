@@ -40,31 +40,31 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
-            panel3 = new Panel();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            textBox3 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            textBox2 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
             panel5 = new Panel();
             label1 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            textBox3 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
+            panel3 = new Panel();
             button1 = new Button();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             panel5.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -203,14 +203,134 @@
             panel2.Size = new Size(1557, 381);
             panel2.TabIndex = 6;
             // 
-            // panel3
+            // label14
             // 
-            panel3.BackColor = Color.ForestGreen;
-            panel3.Controls.Add(button1);
-            panel3.Location = new Point(2, 477);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1483, 166);
-            panel3.TabIndex = 7;
+            label14.AutoSize = true;
+            label14.Location = new Point(452, 341);
+            label14.Name = "label14";
+            label14.Size = new Size(240, 25);
+            label14.TabIndex = 16;
+            label14.Text = "The TUA Admin TeamAdmin ";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(452, 307);
+            label13.Name = "label13";
+            label13.Size = new Size(119, 25);
+            label13.TabIndex = 15;
+            label13.Text = "Best regards, ";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(452, 282);
+            label12.Name = "label12";
+            label12.Size = new Size(456, 25);
+            label12.TabIndex = 14;
+            label12.Text = "if you have any questions, please feel free to reach out . ";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(449, 254);
+            label11.Name = "label11";
+            label11.Size = new Size(409, 25);
+            label11.TabIndex = 13;
+            label11.Text = "regarding the  next steps will be provided shortly. ";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(1152, 229);
+            label10.Name = "label10";
+            label10.Size = new Size(129, 25);
+            label10.TabIndex = 12;
+            label10.Text = "Further details ";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(444, 229);
+            label9.Name = "label9";
+            label9.Size = new Size(715, 25);
+            label9.TabIndex = 11;
+            label9.Text = "We appreciate your interest  and dedication , and we look  forward to your participation. ";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(444, 204);
+            label8.Name = "label8";
+            label8.Size = new Size(798, 25);
+            label8.TabIndex = 10;
+            label8.Text = "We are pleased to inform you that your aplication for providing TUA feedback  has been approved!";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(497, 170);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(186, 31);
+            textBox3.TabIndex = 9;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(438, 170);
+            label7.Name = "label7";
+            label7.Size = new Size(53, 25);
+            label7.TabIndex = 8;
+            label7.Text = "Dear:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(308, 170);
+            label6.Name = "label6";
+            label6.Size = new Size(91, 25);
+            label6.TabIndex = 7;
+            label6.Text = "Message: ";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(643, 128);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(591, 31);
+            textBox2.TabIndex = 6;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(438, 128);
+            label5.Name = "label5";
+            label5.Size = new Size(199, 25);
+            label5.TabIndex = 5;
+            label5.Text = "Application ID Number:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(308, 128);
+            label4.Name = "label4";
+            label4.Size = new Size(79, 25);
+            label4.TabIndex = 4;
+            label4.Text = "Subject: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(438, 86);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(519, 31);
+            textBox1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(308, 86);
+            label3.Name = "label3";
+            label3.Size = new Size(34, 25);
+            label3.TabIndex = 2;
+            label3.Text = "To:";
             // 
             // panel5
             // 
@@ -232,134 +352,14 @@
             label1.TabIndex = 0;
             label1.Text = "Make a Pre Made Email ";
             // 
-            // label3
+            // panel3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(308, 86);
-            label3.Name = "label3";
-            label3.Size = new Size(34, 25);
-            label3.TabIndex = 2;
-            label3.Text = "To:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(438, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(519, 31);
-            textBox1.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(308, 128);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Subject: ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(438, 128);
-            label5.Name = "label5";
-            label5.Size = new Size(199, 25);
-            label5.TabIndex = 5;
-            label5.Text = "Application ID Number:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(643, 128);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(591, 31);
-            textBox2.TabIndex = 6;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(308, 170);
-            label6.Name = "label6";
-            label6.Size = new Size(91, 25);
-            label6.TabIndex = 7;
-            label6.Text = "Message: ";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(438, 170);
-            label7.Name = "label7";
-            label7.Size = new Size(53, 25);
-            label7.TabIndex = 8;
-            label7.Text = "Dear:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(497, 170);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(186, 31);
-            textBox3.TabIndex = 9;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(444, 204);
-            label8.Name = "label8";
-            label8.Size = new Size(798, 25);
-            label8.TabIndex = 10;
-            label8.Text = "We are pleased to inform you that your aplication for providing TUA feedback  has been approved!";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(444, 229);
-            label9.Name = "label9";
-            label9.Size = new Size(715, 25);
-            label9.TabIndex = 11;
-            label9.Text = "We appreciate your interest  and dedication , and we look  forward to your participation. ";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(1152, 229);
-            label10.Name = "label10";
-            label10.Size = new Size(129, 25);
-            label10.TabIndex = 12;
-            label10.Text = "Further details ";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(449, 254);
-            label11.Name = "label11";
-            label11.Size = new Size(409, 25);
-            label11.TabIndex = 13;
-            label11.Text = "regarding the  next steps will be provided shortly. ";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(452, 282);
-            label12.Name = "label12";
-            label12.Size = new Size(456, 25);
-            label12.TabIndex = 14;
-            label12.Text = "if you have any questions, please feel free to reach out . ";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(452, 307);
-            label13.Name = "label13";
-            label13.Size = new Size(119, 25);
-            label13.TabIndex = 15;
-            label13.Text = "Best regards, ";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(452, 341);
-            label14.Name = "label14";
-            label14.Size = new Size(240, 25);
-            label14.TabIndex = 16;
-            label14.Text = "The TUA Admin TeamAdmin ";
+            panel3.BackColor = Color.ForestGreen;
+            panel3.Controls.Add(button1);
+            panel3.Location = new Point(2, 477);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1483, 166);
+            panel3.TabIndex = 7;
             // 
             // button1
             // 
@@ -381,7 +381,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "pg8_PreMadeEmail";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg8_PreMadeEmail";
+            Load += pg8_PreMadeEmail_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -389,9 +391,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 

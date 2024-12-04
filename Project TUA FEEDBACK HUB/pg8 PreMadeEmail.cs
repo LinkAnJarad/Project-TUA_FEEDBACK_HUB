@@ -16,5 +16,10 @@ namespace Project_TUA_FEEDBACK_HUB
         {
             InitializeComponent();
         }
+
+        private void pg8_PreMadeEmail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

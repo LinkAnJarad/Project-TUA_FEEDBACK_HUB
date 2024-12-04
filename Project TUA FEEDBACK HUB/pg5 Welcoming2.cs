@@ -40,14 +40,34 @@ namespace Project_TUA_FEEDBACK_HUB
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pg9_ComplainList pg9_ComplainListc = new pg9_ComplainList();
-            pg9_ComplainListc.Show();
+            pg10_ComplainGraph ComplainPage = new pg10_ComplainGraph();
+            ComplainPage.Show();
             this.Close();
+
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pg2_Log_in_Your_Account logout = new pg2_Log_in_Your_Account();
+
+            logout.Show();
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            pg10_ComplainGraph ComplainPage = new pg10_ComplainGraph();
+            ComplainPage.Show();
+            this.Close();
+        }
+
+        private void pg5_Welcoming2_Load(object sender, EventArgs e)
         {
 
         }

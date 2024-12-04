@@ -16,5 +16,10 @@ namespace Project_TUA_FEEDBACK_HUB
         {
             InitializeComponent();
         }
+
+        private void pg7_Registration2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

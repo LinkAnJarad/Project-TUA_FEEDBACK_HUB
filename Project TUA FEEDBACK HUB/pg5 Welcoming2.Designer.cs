@@ -94,6 +94,7 @@
             button2.TabIndex = 6;
             button2.Text = "Log Out";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label2
             // 
@@ -132,18 +133,19 @@
             // 
             linkLabel5.AutoSize = true;
             linkLabel5.LinkColor = Color.White;
-            linkLabel5.Location = new Point(996, 7);
+            linkLabel5.Location = new Point(968, 7);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(187, 25);
+            linkLabel5.Size = new Size(215, 25);
             linkLabel5.TabIndex = 4;
             linkLabel5.TabStop = true;
-            linkLabel5.Text = "Analytical Complaints ";
+            linkLabel5.Text = " College Complain Graph ";
+            linkLabel5.LinkClicked += linkLabel5_LinkClicked;
             // 
             // linkLabel4
             // 
             linkLabel4.AutoSize = true;
             linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(787, 7);
+            linkLabel4.Location = new Point(744, 7);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(164, 25);
             linkLabel4.TabIndex = 3;
@@ -154,7 +156,7 @@
             // 
             linkLabel3.AutoSize = true;
             linkLabel3.LinkColor = Color.White;
-            linkLabel3.Location = new Point(535, 7);
+            linkLabel3.Location = new Point(557, 7);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(132, 25);
             linkLabel3.TabIndex = 2;
@@ -260,7 +262,9 @@
             Controls.Add(panel4);
             Controls.Add(panel1);
             Name = "pg5_Welcoming2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg5_Welcoming2";
+            Load += pg5_Welcoming2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();

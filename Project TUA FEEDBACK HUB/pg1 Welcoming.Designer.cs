@@ -170,7 +170,7 @@
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(76, 0);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(210, 128);
+            pictureBox5.Size = new Size(219, 128);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
@@ -184,6 +184,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

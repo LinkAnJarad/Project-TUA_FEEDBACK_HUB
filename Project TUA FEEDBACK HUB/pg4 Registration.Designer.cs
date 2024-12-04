@@ -330,6 +330,7 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "pg4_Registration";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg4_Registration";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

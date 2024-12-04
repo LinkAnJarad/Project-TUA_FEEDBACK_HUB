@@ -68,6 +68,9 @@ namespace Project_TUA_FEEDBACK_HUB
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+           
+            
             string username = emailTXTbox.Text;
             string password = passTXTbox.Text;
             MySqlConnection connection = GetConnection();
@@ -89,6 +92,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 /*Fullhistory fullhistory = new Fullhistory();
                 fullhistory.Show();*/
                 this.Hide(); // Hide the login form
+                this.Close();
             }
             else
             {

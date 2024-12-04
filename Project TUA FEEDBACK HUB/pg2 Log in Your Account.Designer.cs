@@ -49,6 +49,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel1.BackColor = Color.ForestGreen;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
@@ -153,8 +154,10 @@
             // 
             passTXTbox.Location = new Point(421, 242);
             passTXTbox.Name = "passTXTbox";
+            passTXTbox.PasswordChar = '*';
             passTXTbox.Size = new Size(591, 31);
             passTXTbox.TabIndex = 4;
+            passTXTbox.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -196,6 +199,7 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "pg2_Log_in_Your_Account";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg2_Log_in_Your_Account";
             Load += pg2_Log_in_Your_Account_Load;
             panel1.ResumeLayout(false);

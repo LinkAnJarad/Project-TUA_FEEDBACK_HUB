@@ -40,30 +40,21 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button1 = new Button();
-            panel5 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            tableLayoutPanel5 = new TableLayoutPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            approval_table = new DataGridView();
+            FirstName = new DataGridViewTextBoxColumn();
+            MiddleName = new DataGridViewTextBoxColumn();
+            LastName = new DataGridViewTextBoxColumn();
+            AccountNumber = new DataGridViewTextBoxColumn();
+            AccountType = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Data = new DataGridViewButtonColumn();
             label1 = new Label();
             panel3 = new Panel();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
-            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)approval_table).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -106,7 +97,7 @@
             // 
             linkLabel4.AutoSize = true;
             linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(826, 14);
+            linkLabel4.Location = new Point(786, 14);
             linkLabel4.Name = "linkLabel4";
             linkLabel4.Size = new Size(164, 25);
             linkLabel4.TabIndex = 3;
@@ -117,7 +108,7 @@
             // 
             linkLabel3.AutoSize = true;
             linkLabel3.LinkColor = Color.White;
-            linkLabel3.Location = new Point(572, 14);
+            linkLabel3.Location = new Point(594, 16);
             linkLabel3.Name = "linkLabel3";
             linkLabel3.Size = new Size(132, 25);
             linkLabel3.TabIndex = 2;
@@ -129,7 +120,7 @@
             // 
             linkLabel2.AutoSize = true;
             linkLabel2.LinkColor = Color.White;
-            linkLabel2.Location = new Point(249, 14);
+            linkLabel2.Location = new Point(292, 14);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(226, 25);
             linkLabel2.TabIndex = 1;
@@ -140,7 +131,7 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(42, 14);
+            linkLabel1.Location = new Point(74, 14);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(111, 25);
             linkLabel1.TabIndex = 0;
@@ -183,17 +174,7 @@
             // 
             panel2.BackColor = Color.LightYellow;
             panel2.BackgroundImageLayout = ImageLayout.Center;
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(tableLayoutPanel6);
-            panel2.Controls.Add(tableLayoutPanel5);
-            panel2.Controls.Add(tableLayoutPanel4);
-            panel2.Controls.Add(tableLayoutPanel3);
-            panel2.Controls.Add(tableLayoutPanel2);
-            panel2.Controls.Add(tableLayoutPanel1);
+            panel2.Controls.Add(approval_table);
             panel2.Controls.Add(label1);
             panel2.ForeColor = SystemColors.ButtonHighlight;
             panel2.Location = new Point(-32, 111);
@@ -201,192 +182,67 @@
             panel2.Size = new Size(1513, 445);
             panel2.TabIndex = 5;
             // 
-            // button5
+            // approval_table
             // 
-            button5.BackColor = SystemColors.Desktop;
-            button5.Location = new Point(1113, 262);
-            button5.Name = "button5";
-            button5.Size = new Size(112, 27);
-            button5.TabIndex = 11;
-            button5.Text = "OPEN";
-            button5.UseVisualStyleBackColor = false;
+            approval_table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            approval_table.Columns.AddRange(new DataGridViewColumn[] { FirstName, MiddleName, LastName, AccountNumber, AccountType, Column3, Data });
+            approval_table.Location = new Point(69, 89);
+            approval_table.Name = "approval_table";
+            approval_table.RowHeadersWidth = 62;
+            approval_table.Size = new Size(1116, 259);
+            approval_table.TabIndex = 13;
+            approval_table.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // button4
+            // FirstName
             // 
-            button4.BackColor = SystemColors.ControlText;
-            button4.Location = new Point(1113, 226);
-            button4.Name = "button4";
-            button4.Size = new Size(112, 27);
-            button4.TabIndex = 10;
-            button4.Text = "OPEN";
-            button4.UseVisualStyleBackColor = false;
+            FirstName.HeaderText = "First Name";
+            FirstName.MinimumWidth = 8;
+            FirstName.Name = "FirstName";
+            FirstName.Width = 150;
             // 
-            // button3
+            // MiddleName
             // 
-            button3.BackColor = SystemColors.Desktop;
-            button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(1113, 195);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 27);
-            button3.TabIndex = 9;
-            button3.Text = "OPEN";
-            button3.UseVisualStyleBackColor = false;
+            MiddleName.HeaderText = "Middle Name";
+            MiddleName.MinimumWidth = 8;
+            MiddleName.Name = "MiddleName";
+            MiddleName.Width = 150;
             // 
-            // button1
+            // LastName
             // 
-            button1.BackColor = SystemColors.ControlText;
-            button1.Location = new Point(1113, 162);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 27);
-            button1.TabIndex = 8;
-            button1.Text = "OPEN";
-            button1.UseVisualStyleBackColor = false;
+            LastName.HeaderText = "LastName";
+            LastName.MinimumWidth = 8;
+            LastName.Name = "LastName";
+            LastName.Width = 150;
             // 
-            // panel5
+            // AccountNumber
             // 
-            panel5.BackColor = SystemColors.ControlText;
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(label7);
-            panel5.Controls.Add(label6);
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(label4);
-            panel5.Controls.Add(label3);
-            panel5.Location = new Point(196, 128);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(903, 31);
-            panel5.TabIndex = 7;
+            AccountNumber.HeaderText = "Account Number";
+            AccountNumber.MinimumWidth = 8;
+            AccountNumber.Name = "AccountNumber";
+            AccountNumber.Width = 150;
             // 
-            // label8
+            // AccountType
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(780, 4);
-            label8.Name = "label8";
-            label8.Size = new Size(76, 25);
-            label8.TabIndex = 13;
-            label8.Text = "College ";
+            AccountType.HeaderText = "Account Type";
+            AccountType.MinimumWidth = 8;
+            AccountType.Name = "AccountType";
+            AccountType.Width = 150;
             // 
-            // label7
+            // Column3
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(611, 6);
-            label7.Name = "label7";
-            label7.Size = new Size(119, 25);
-            label7.TabIndex = 12;
-            label7.Text = "Account Type";
+            Column3.HeaderText = "College";
+            Column3.MinimumWidth = 8;
+            Column3.Name = "Column3";
+            Column3.Width = 150;
             // 
-            // label6
+            // Data
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(453, 6);
-            label6.Name = "label6";
-            label6.Size = new Size(152, 25);
-            label6.TabIndex = 11;
-            label6.Text = "Account Number ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(327, 6);
-            label5.Name = "label5";
-            label5.Size = new Size(95, 25);
-            label5.TabIndex = 10;
-            label5.Text = "Last Name";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(159, 6);
-            label4.Name = "label4";
-            label4.Size = new Size(119, 25);
-            label4.TabIndex = 9;
-            label4.Text = "Middle Name";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(16, 6);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 25);
-            label3.TabIndex = 8;
-            label3.Text = "First Name";
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.ColumnCount = 2;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Location = new Point(795, 226);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 2;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(304, 63);
-            tableLayoutPanel6.TabIndex = 6;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Location = new Point(496, 226);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(300, 63);
-            tableLayoutPanel5.TabIndex = 5;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Location = new Point(199, 227);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(300, 62);
-            tableLayoutPanel4.TabIndex = 4;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Location = new Point(795, 156);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(304, 69);
-            tableLayoutPanel3.TabIndex = 3;
-            // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Location = new Point(496, 157);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(300, 68);
-            tableLayoutPanel2.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Location = new Point(198, 158);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(300, 67);
-            tableLayoutPanel1.TabIndex = 1;
+            Data.HeaderText = "Data";
+            Data.MinimumWidth = 8;
+            Data.Name = "Data";
+            Data.Resizable = DataGridViewTriState.True;
+            Data.SortMode = DataGridViewColumnSortMode.Automatic;
+            Data.Width = 150;
             // 
             // label1
             // 
@@ -415,6 +271,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "pg6_AccountApproval";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "pg6_AccountApproval";
             Load += pg6_AccountApproval_Load;
             panel1.ResumeLayout(false);
@@ -424,8 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)approval_table).EndInit();
             ResumeLayout(false);
         }
 
@@ -444,22 +300,13 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
         private Label label1;
-        private Panel panel5;
-        private TableLayoutPanel tableLayoutPanel6;
-        private TableLayoutPanel tableLayoutPanel5;
-        private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel3;
-        private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button1;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
+        private DataGridView approval_table;
+        private DataGridViewTextBoxColumn FirstName;
+        private DataGridViewTextBoxColumn MiddleName;
+        private DataGridViewTextBoxColumn LastName;
+        private DataGridViewTextBoxColumn AccountNumber;
+        private DataGridViewTextBoxColumn AccountType;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewButtonColumn Data;
     }
 }
