@@ -26,7 +26,6 @@ namespace Project_TUA_FEEDBACK_HUB
         {
             pg5_Welcoming2 pg5_Welcoming2 = new pg5_Welcoming2();
             pg5_Welcoming2.Show();
-            this.Close();
 
         }
 
@@ -34,15 +33,13 @@ namespace Project_TUA_FEEDBACK_HUB
         {
             pg6_AccountApproval accountApproval = new pg6_AccountApproval();
             accountApproval.Show();
-            this.Close();
 
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pg10_ComplainGraph ComplainPage = new pg10_ComplainGraph();
-            ComplainPage.Show();
-            this.Close();
+            pg9_ComplainList complainList = new pg9_ComplainList();
+            complainList.Show();
 
 
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pg9_ComplainList));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel4 = new Panel();
             linkLabel5 = new LinkLabel();
@@ -40,26 +41,19 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgComplaintList = new DataGridView();
             label1 = new Label();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button1 = new Button();
-            panel5 = new Panel();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             panel3 = new Panel();
+            hdrName = new DataGridViewTextBoxColumn();
+            hdrComplainID = new DataGridViewTextBoxColumn();
+            hdrComplainType = new DataGridViewTextBoxColumn();
+            hdrPriorityLevel = new DataGridViewComboBoxColumn();
+            hdrOpen = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgComplaintList).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -69,9 +63,10 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox5);
-            panel1.Location = new Point(-16, -26);
+            panel1.Location = new Point(-11, -16);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1490, 146);
+            panel1.Size = new Size(1043, 88);
             panel1.TabIndex = 5;
             // 
             // panel4
@@ -82,18 +77,20 @@
             panel4.Controls.Add(linkLabel3);
             panel4.Controls.Add(linkLabel2);
             panel4.Controls.Add(linkLabel1);
-            panel4.Location = new Point(235, 102);
+            panel4.Location = new Point(164, 61);
+            panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1255, 43);
+            panel4.Size = new Size(878, 26);
             panel4.TabIndex = 7;
             // 
             // linkLabel5
             // 
             linkLabel5.AutoSize = true;
             linkLabel5.LinkColor = Color.White;
-            linkLabel5.Location = new Point(1011, 14);
+            linkLabel5.Location = new Point(708, 8);
+            linkLabel5.Margin = new Padding(2, 0, 2, 0);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(205, 25);
+            linkLabel5.Size = new Size(137, 15);
             linkLabel5.TabIndex = 5;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "College Complain Graph";
@@ -102,9 +99,10 @@
             // 
             linkLabel4.AutoSize = true;
             linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(783, 14);
+            linkLabel4.Location = new Point(548, 8);
+            linkLabel4.Margin = new Padding(2, 0, 2, 0);
             linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(164, 25);
+            linkLabel4.Size = new Size(110, 15);
             linkLabel4.TabIndex = 3;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Complain Archives ";
@@ -113,9 +111,10 @@
             // 
             linkLabel3.AutoSize = true;
             linkLabel3.LinkColor = Color.White;
-            linkLabel3.Location = new Point(538, 14);
+            linkLabel3.Location = new Point(377, 8);
+            linkLabel3.Margin = new Padding(2, 0, 2, 0);
             linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(132, 25);
+            linkLabel3.Size = new Size(88, 15);
             linkLabel3.TabIndex = 2;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Complain Lists ";
@@ -124,9 +123,10 @@
             // 
             linkLabel2.AutoSize = true;
             linkLabel2.LinkColor = Color.White;
-            linkLabel2.Location = new Point(249, 14);
+            linkLabel2.Location = new Point(174, 8);
+            linkLabel2.Margin = new Padding(2, 0, 2, 0);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(226, 25);
+            linkLabel2.Size = new Size(150, 15);
             linkLabel2.TabIndex = 1;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Student Account Approval ";
@@ -136,9 +136,10 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(42, 14);
+            linkLabel1.Location = new Point(29, 8);
+            linkLabel1.Margin = new Padding(2, 0, 2, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(111, 25);
+            linkLabel1.Size = new Size(74, 15);
             linkLabel1.TabIndex = 0;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Homescreen";
@@ -148,9 +149,10 @@
             // 
             button2.BackColor = SystemColors.ControlText;
             button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(1339, 51);
+            button2.Location = new Point(937, 31);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(78, 20);
             button2.TabIndex = 6;
             button2.Text = "Log Out ";
             button2.UseVisualStyleBackColor = false;
@@ -159,18 +161,20 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(601, 51);
+            label2.Location = new Point(421, 31);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(262, 22);
+            label2.Size = new Size(196, 15);
             label2.TabIndex = 1;
             label2.Text = "TUA FEEDBACK SERVICE ";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(3, 26);
+            pictureBox5.Location = new Point(2, 16);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(234, 128);
+            pictureBox5.Size = new Size(164, 77);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
@@ -179,27 +183,33 @@
             // 
             panel2.BackColor = Color.LightYellow;
             panel2.BackgroundImageLayout = ImageLayout.Center;
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(dgComplaintList);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(panel5);
             panel2.ForeColor = SystemColors.ButtonHighlight;
-            panel2.Location = new Point(-27, 118);
+            panel2.Location = new Point(-19, 71);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1498, 439);
+            panel2.Size = new Size(1049, 263);
             panel2.TabIndex = 6;
             // 
-            // dataGridView1
+            // dgComplaintList
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(197, 162);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(910, 127);
-            dataGridView1.TabIndex = 13;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgComplaintList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { hdrName, hdrComplainID, hdrComplainType, hdrPriorityLevel, hdrOpen });
+            dgComplaintList.Location = new Point(256, 74);
+            dgComplaintList.Margin = new Padding(2);
+            dgComplaintList.Name = "dgComplaintList";
+            dgComplaintList.RowHeadersWidth = 62;
+            dgComplaintList.Size = new Size(574, 166);
+            dgComplaintList.TabIndex = 13;
             // 
             // label1
             // 
@@ -207,137 +217,60 @@
             label1.BackColor = Color.LightYellow;
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Desktop;
-            label1.Location = new Point(612, 18);
+            label1.Location = new Point(428, 11);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(222, 28);
+            label1.Size = new Size(159, 19);
             label1.TabIndex = 12;
             label1.Text = "Feedback/Concern Lists ";
-            // 
-            // button5
-            // 
-            button5.BackColor = SystemColors.Desktop;
-            button5.Location = new Point(1113, 262);
-            button5.Name = "button5";
-            button5.Size = new Size(112, 27);
-            button5.TabIndex = 11;
-            button5.Text = "OPEN";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = SystemColors.ControlText;
-            button4.Location = new Point(1113, 226);
-            button4.Name = "button4";
-            button4.Size = new Size(112, 27);
-            button4.TabIndex = 10;
-            button4.Text = "OPEN";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = SystemColors.Desktop;
-            button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(1113, 195);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 27);
-            button3.TabIndex = 9;
-            button3.Text = "OPEN";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ControlText;
-            button1.Location = new Point(1113, 162);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 27);
-            button1.TabIndex = 8;
-            button1.Text = "OPEN";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = SystemColors.ControlText;
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(label7);
-            panel5.Controls.Add(label6);
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(label4);
-            panel5.Controls.Add(label3);
-            panel5.Location = new Point(196, 128);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(903, 31);
-            panel5.TabIndex = 7;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(791, 6);
-            label8.Name = "label8";
-            label8.Size = new Size(86, 25);
-            label8.TabIndex = 13;
-            label8.Text = "Progress ";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(606, 6);
-            label7.Name = "label7";
-            label7.Size = new Size(0, 25);
-            label7.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(612, 6);
-            label6.Name = "label6";
-            label6.Size = new Size(117, 25);
-            label6.TabIndex = 11;
-            label6.Text = "Priority Level ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(416, 4);
-            label5.Name = "label5";
-            label5.Size = new Size(130, 25);
-            label5.TabIndex = 10;
-            label5.Text = "Complain Type";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(198, 6);
-            label4.Name = "label4";
-            label4.Size = new Size(186, 25);
-            label4.TabIndex = 9;
-            label4.Text = "Complain ID Number ";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(39, 2);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 25);
-            label3.TabIndex = 8;
-            label3.Text = "Name ";
             // 
             // panel3
             // 
             panel3.BackColor = Color.ForestGreen;
-            panel3.Location = new Point(-17, 553);
+            panel3.Location = new Point(-12, 332);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1493, 134);
+            panel3.Size = new Size(1045, 80);
             panel3.TabIndex = 7;
+            // 
+            // hdrName
+            // 
+            hdrName.HeaderText = "Name";
+            hdrName.Name = "hdrName";
+            // 
+            // hdrComplainID
+            // 
+            hdrComplainID.HeaderText = "Complain ID";
+            hdrComplainID.Name = "hdrComplainID";
+            // 
+            // hdrComplainType
+            // 
+            hdrComplainType.HeaderText = "Complain Type";
+            hdrComplainType.Name = "hdrComplainType";
+            // 
+            // hdrPriorityLevel
+            // 
+            hdrPriorityLevel.HeaderText = "Priority Level";
+            hdrPriorityLevel.Items.AddRange(new object[] { "Important - Urgent", "Important - Not Urgent", "Not important - Urgent", "Not important - Not Urgent" });
+            hdrPriorityLevel.Name = "hdrPriorityLevel";
+            hdrPriorityLevel.Resizable = DataGridViewTriState.True;
+            hdrPriorityLevel.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // hdrOpen
+            // 
+            hdrOpen.HeaderText = "Open";
+            hdrOpen.Name = "hdrOpen";
+            hdrOpen.Text = "Open";
             // 
             // pg9_ComplainList
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1458, 668);
+            ClientSize = new Size(1021, 401);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(2);
             Name = "pg9_ComplainList";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "pg9_ComplainList";
@@ -349,9 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgComplaintList).EndInit();
             ResumeLayout(false);
         }
 
@@ -367,20 +298,14 @@
         private Label label2;
         private PictureBox pictureBox5;
         private Panel panel2;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button1;
-        private Panel panel5;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
         private Panel panel3;
         private Label label1;
         private LinkLabel linkLabel5;
-        private DataGridView dataGridView1;
+        private DataGridView dgComplaintList;
+        private DataGridViewTextBoxColumn hdrName;
+        private DataGridViewTextBoxColumn hdrComplainID;
+        private DataGridViewTextBoxColumn hdrComplainType;
+        private DataGridViewComboBoxColumn hdrPriorityLevel;
+        private DataGridViewButtonColumn hdrOpen;
     }
 }

@@ -35,11 +35,11 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel5 = new Panel();
-            progressBar6 = new ProgressBar();
-            progressBar4 = new ProgressBar();
-            progressBar3 = new ProgressBar();
-            progressBar2 = new ProgressBar();
+            pbSLCN = new ProgressBar();
             pbCEIS = new ProgressBar();
+            pbCASE = new ProgressBar();
+            pbCMT = new ProgressBar();
+            pbIBAM = new ProgressBar();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
@@ -67,17 +67,19 @@
             // pbCAHS
             // 
             pbCAHS.ForeColor = Color.MistyRose;
-            pbCAHS.Location = new Point(764, 432);
+            pbCAHS.Location = new Point(535, 259);
+            pbCAHS.Margin = new Padding(2);
             pbCAHS.Name = "pbCAHS";
-            pbCAHS.Size = new Size(278, 31);
+            pbCAHS.Size = new Size(195, 19);
             pbCAHS.TabIndex = 5;
             pbCAHS.Click += pbCAHS_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(293, 484);
+            textBox1.Location = new Point(205, 290);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(71, 31);
+            textBox1.Size = new Size(51, 23);
             textBox1.TabIndex = 7;
             // 
             // panel1
@@ -86,27 +88,30 @@
             panel1.BackColor = Color.ForestGreen;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-17, -16);
+            panel1.Location = new Point(-12, -10);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1732, 106);
+            panel1.Size = new Size(1212, 64);
             panel1.TabIndex = 8;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(752, 38);
+            label1.Location = new Point(526, 23);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(262, 22);
+            label1.Size = new Size(196, 15);
             label1.TabIndex = 1;
             label1.Text = "TUA FEEDBACK SERVICE ";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(19, 19);
+            pictureBox1.Location = new Point(13, 11);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(139, 87);
+            pictureBox1.Size = new Size(97, 52);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -115,11 +120,11 @@
             // 
             panel5.BackColor = Color.LightYellow;
             panel5.BackgroundImageLayout = ImageLayout.Center;
-            panel5.Controls.Add(progressBar6);
-            panel5.Controls.Add(progressBar4);
-            panel5.Controls.Add(progressBar3);
-            panel5.Controls.Add(progressBar2);
+            panel5.Controls.Add(pbSLCN);
             panel5.Controls.Add(pbCEIS);
+            panel5.Controls.Add(pbCASE);
+            panel5.Controls.Add(pbCMT);
+            panel5.Controls.Add(pbIBAM);
             panel5.Controls.Add(pictureBox7);
             panel5.Controls.Add(pictureBox6);
             panel5.Controls.Add(pictureBox5);
@@ -134,55 +139,62 @@
             panel5.Controls.Add(textBox2);
             panel5.Controls.Add(textBox1);
             panel5.Controls.Add(pbCAHS);
-            panel5.Location = new Point(-45, 79);
+            panel5.Location = new Point(-32, 47);
+            panel5.Margin = new Padding(2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1769, 487);
+            panel5.Size = new Size(1238, 292);
             panel5.TabIndex = 9;
             panel5.Paint += panel5_Paint;
             // 
-            // progressBar6
+            // pbSLCN
             // 
-            progressBar6.Location = new Point(764, 45);
-            progressBar6.Name = "progressBar6";
-            progressBar6.Size = new Size(278, 31);
-            progressBar6.TabIndex = 27;
-            progressBar6.Click += progressBar6_Click;
-            // 
-            // progressBar4
-            // 
-            progressBar4.Location = new Point(764, 113);
-            progressBar4.Name = "progressBar4";
-            progressBar4.Size = new Size(278, 31);
-            progressBar4.TabIndex = 25;
-            // 
-            // progressBar3
-            // 
-            progressBar3.Location = new Point(764, 196);
-            progressBar3.Name = "progressBar3";
-            progressBar3.Size = new Size(278, 31);
-            progressBar3.TabIndex = 24;
-            // 
-            // progressBar2
-            // 
-            progressBar2.Location = new Point(764, 277);
-            progressBar2.Name = "progressBar2";
-            progressBar2.Size = new Size(278, 31);
-            progressBar2.TabIndex = 23;
+            pbSLCN.Location = new Point(535, 27);
+            pbSLCN.Margin = new Padding(2);
+            pbSLCN.Name = "pbSLCN";
+            pbSLCN.Size = new Size(195, 19);
+            pbSLCN.TabIndex = 27;
+            pbSLCN.Click += progressBar6_Click;
             // 
             // pbCEIS
             // 
-            pbCEIS.Location = new Point(764, 361);
+            pbCEIS.Location = new Point(535, 68);
+            pbCEIS.Margin = new Padding(2);
             pbCEIS.Name = "pbCEIS";
-            pbCEIS.Size = new Size(278, 31);
-            pbCEIS.TabIndex = 22;
-            pbCEIS.Click += pbCEIS_Click;
+            pbCEIS.Size = new Size(195, 19);
+            pbCEIS.TabIndex = 25;
+            // 
+            // pbCASE
+            // 
+            pbCASE.Location = new Point(535, 118);
+            pbCASE.Margin = new Padding(2);
+            pbCASE.Name = "pbCASE";
+            pbCASE.Size = new Size(195, 19);
+            pbCASE.TabIndex = 24;
+            // 
+            // pbCMT
+            // 
+            pbCMT.Location = new Point(535, 166);
+            pbCMT.Margin = new Padding(2);
+            pbCMT.Name = "pbCMT";
+            pbCMT.Size = new Size(195, 19);
+            pbCMT.TabIndex = 23;
+            // 
+            // pbIBAM
+            // 
+            pbIBAM.Location = new Point(535, 217);
+            pbIBAM.Margin = new Padding(2);
+            pbIBAM.Name = "pbIBAM";
+            pbIBAM.Size = new Size(195, 19);
+            pbIBAM.TabIndex = 22;
+            pbIBAM.Click += pbCEIS_Click;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(678, 412);
+            pictureBox7.Location = new Point(475, 247);
+            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(65, 75);
+            pictureBox7.Size = new Size(46, 45);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 20;
             pictureBox7.TabStop = false;
@@ -190,9 +202,10 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(678, 260);
+            pictureBox6.Location = new Point(475, 156);
+            pictureBox6.Margin = new Padding(2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(65, 75);
+            pictureBox6.Size = new Size(46, 45);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 19;
             pictureBox6.TabStop = false;
@@ -200,9 +213,10 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(678, 179);
+            pictureBox5.Location = new Point(475, 107);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(65, 75);
+            pictureBox5.Size = new Size(46, 45);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 18;
             pictureBox5.TabStop = false;
@@ -210,9 +224,10 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(678, 98);
+            pictureBox4.Location = new Point(475, 59);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(65, 75);
+            pictureBox4.Size = new Size(46, 45);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 17;
             pictureBox4.TabStop = false;
@@ -220,9 +235,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(678, 341);
+            pictureBox3.Location = new Point(475, 205);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(65, 75);
+            pictureBox3.Size = new Size(46, 45);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 16;
             pictureBox3.TabStop = false;
@@ -230,77 +246,86 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(678, 17);
+            pictureBox2.Location = new Point(475, 10);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 75);
+            pictureBox2.Size = new Size(46, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(590, 432);
+            textBox7.Location = new Point(413, 259);
+            textBox7.Margin = new Padding(2);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(65, 31);
+            textBox7.Size = new Size(47, 23);
             textBox7.TabIndex = 13;
             textBox7.Text = "CAHS";
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(590, 288);
+            textBox6.Location = new Point(413, 173);
+            textBox6.Margin = new Padding(2);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(65, 31);
+            textBox6.Size = new Size(47, 23);
             textBox6.TabIndex = 12;
             textBox6.Text = "CMT";
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(590, 196);
+            textBox5.Location = new Point(413, 118);
+            textBox5.Margin = new Padding(2);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(65, 31);
+            textBox5.Size = new Size(47, 23);
             textBox5.TabIndex = 11;
             textBox5.Text = "CASE";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(590, 113);
+            textBox4.Location = new Point(413, 68);
+            textBox4.Margin = new Padding(2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(65, 31);
+            textBox4.Size = new Size(47, 23);
             textBox4.TabIndex = 10;
             textBox4.Text = "CEIS";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(590, 361);
+            textBox3.Location = new Point(413, 217);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(65, 31);
+            textBox3.Size = new Size(47, 23);
             textBox3.TabIndex = 9;
             textBox3.Text = "IBAM";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(590, 45);
+            textBox2.Location = new Point(413, 27);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(65, 31);
+            textBox2.Size = new Size(47, 23);
             textBox2.TabIndex = 8;
             textBox2.Text = "SLCN";
             // 
             // panel6
             // 
             panel6.BackColor = Color.ForestGreen;
-            panel6.Location = new Point(-45, 563);
+            panel6.Location = new Point(-32, 338);
+            panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1791, 151);
+            panel6.Size = new Size(1254, 91);
             panel6.TabIndex = 10;
             // 
             // pg10_ComplainGraph
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1676, 702);
+            ClientSize = new Size(1173, 421);
             Controls.Add(panel6);
             Controls.Add(panel1);
             Controls.Add(panel5);
+            Margin = new Padding(2);
             Name = "pg10_ComplainGraph";
             Text = "pg10_ComplainGraph";
             panel1.ResumeLayout(false);
@@ -337,10 +362,10 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private ProgressBar progressBar6;
-        private ProgressBar progressBar4;
-        private ProgressBar progressBar3;
-        private ProgressBar progressBar2;
+        private ProgressBar pbSLCN;
         private ProgressBar pbCEIS;
+        private ProgressBar pbCASE;
+        private ProgressBar pbCMT;
+        private ProgressBar pbIBAM;
     }
 }
