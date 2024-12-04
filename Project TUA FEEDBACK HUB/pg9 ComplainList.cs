@@ -82,6 +82,7 @@ namespace Project_TUA_FEEDBACK_HUB
         private void dgComplaintList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Check if the clicked cell is in the button column
+            //dfsdf
             if (e.ColumnIndex == dgComplaintList.Columns["hdrOpen"].Index && e.RowIndex >= 0)
             {
                 // Retrieve the value of hdrComplainID from the same row
