@@ -14,34 +14,16 @@ namespace Project_TUA_FEEDBACK_HUB
     public partial class pg2_Log_in_Your_Account : Form
     {
 
+
         public pg2_Log_in_Your_Account()
         {
             InitializeComponent();
 
         }
-        static string server = "localhost";
-        static string port = "3306";
-        static string username = "root";
-        static string password = "";
-        static string database = "tuafms";
 
-        static string connectionString = $"server={server};port={port};username={username};password={password};database={database};";
+        MySqlConnection connection = ConnectionDB.GetConnection();
 
-        public static MySqlConnection GetConnection()
-        {
-            MySqlConnection mySqlConnection = new MySqlConnection(connectionString);
-            try
-            {
-                mySqlConnection.Open();
-                return mySqlConnection;
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Connection failed: {ex.Message}");
-                return null;
-            }
-        }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             p3_Forgot_password p3_Forgot_Password = new p3_Forgot_password();
@@ -73,7 +55,7 @@ namespace Project_TUA_FEEDBACK_HUB
             
             string username = emailTXTbox.Text;
             string password = passTXTbox.Text;
-            MySqlConnection connection = GetConnection();
+            //MySqlConnection connection = GetConnection();
 
 
 

@@ -13,34 +13,14 @@ namespace Project_TUA_FEEDBACK_HUB
 {
     public partial class pg10_ComplainGraph : Form
     {
-        static string server = "localhost";
-        static string port = "3306";
-        static string username = "root";
-        static string password = "";
-        static string database = "tuafms";
+        
 
-        static string connectionString = $"server={server};port={port};username={username};password={password};database={database};";
-
-        public static MySqlConnection GetConnection()
-        {
-            MySqlConnection mySqlConnection = new MySqlConnection(connectionString);
-            try
-            {
-                mySqlConnection.Open();
-                return mySqlConnection;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Connection failed: {ex.Message}");
-                return null;
-            }
-        }
-
-        MySqlConnection connection = GetConnection();
+        MySqlConnection connection = ConnectionDB.GetConnection();
+        string connectionstring = ConnectionDB.connectionString;
         public pg10_ComplainGraph()
         {
             InitializeComponent();
+            //MessageBox.Show(connection.ConnectionString);
             load_graph();
         }
 
@@ -48,7 +28,7 @@ namespace Project_TUA_FEEDBACK_HUB
         {
 
             int total_feedback = 0;
-            using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(connectionstring))
             {
                 conn.Open();
                 string query = @"SELECT COUNT(*) FROM feedback;";
