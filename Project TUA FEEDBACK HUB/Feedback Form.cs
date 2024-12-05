@@ -16,10 +16,13 @@ namespace Project_TUA_FEEDBACK_HUB
 
         MySqlConnection connection = ConnectionDB.GetConnection();
         public string refno = "";
-        public Feedback_Form(string fdbk_refno)
+        public string email = "";
+        public string name = "";
+        public Feedback_Form(string fdbk_refno, string passed_name)
         {
             InitializeComponent();
             refno = fdbk_refno;
+            name = passed_name;
             load_user();
         }
 
@@ -37,13 +40,20 @@ namespace Project_TUA_FEEDBACK_HUB
                     while (reader.Read())
                     {
                         lblEmail.Text = reader["TUA_email"].ToString();
+                        email = reader["TUA_email"].ToString();
                         lblCollege.Text = reader["coll_acrnym"].ToString();
                         lblCategory.Text = reader["fdbk_type"].ToString();
                         lblInquiry.Text = reader["fdbk_detail"].ToString();
+
                     }
                 }
             }
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pg8_PreMadeEmail formemail = new pg8_PreMadeEmail(email, refno, name);
+            formemail.Show();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Project_TUA_FEEDBACK_HUB
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
             {
                 conn.Open();
-                string query = @"SELECT fdbk_refno, fdbk_type, fdbk_priority, CONCAT(u.user_fname, "" "", u.user_sname) as name FROM feedback JOIN useraccounts as u WHERE feedback.user_id = u.acct_number;";
+                string query = @"SELECT fdbk_refno, fdbk_type, fdbk_priority, CONCAT(u.user_fname, "" "", u.user_sname) as name FROM feedback JOIN useraccounts as u WHERE feedback.user_id = u.acct_number AND feedback.fdbk_status='Pending';";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -68,10 +68,12 @@ namespace Project_TUA_FEEDBACK_HUB
             {
                 // Retrieve the value of hdrComplainID from the same row
                 var complainID = dgComplaintList.Rows[e.RowIndex].Cells["hdrComplainID"].Value.ToString();
+                var name = dgComplaintList.Rows[e.RowIndex].Cells["hdrName"].Value.ToString();
+
 
                 // Now you can use the complainID as needed
                 //MessageBox.Show("Open button clicked for Complain ID: " + complainID);
-                Feedback_Form feedbacackform = new Feedback_Form(complainID);
+                Feedback_Form feedbacackform = new Feedback_Form(complainID, name);
                 feedbacackform.Show();
 
                 // You can also perform other actions, such as opening a detailed view of the complaint

@@ -1,6 +1,6 @@
 ﻿namespace Project_TUA_FEEDBACK_HUB
 {
-    partial class pg9_ComplainList
+    partial class Complain_Archive
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pg9_ComplainList));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Complain_Archive));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel4 = new Panel();
             linkLabel5 = new LinkLabel();
@@ -40,15 +40,13 @@
             button2 = new Button();
             label2 = new Label();
             pictureBox5 = new PictureBox();
+            label1 = new Label();
             panel2 = new Panel();
             dgComplaintList = new DataGridView();
-            hdrName = new DataGridViewTextBoxColumn();
-            hdrComplainID = new DataGridViewTextBoxColumn();
-            hdrComplainType = new DataGridViewTextBoxColumn();
-            hdrPriorityLevel = new DataGridViewComboBoxColumn();
-            hdrOpen = new DataGridViewButtonColumn();
-            label1 = new Label();
             panel3 = new Panel();
+            ComplainID = new DataGridViewTextBoxColumn();
+            ComplainType = new DataGridViewTextBoxColumn();
+            Progress = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -63,11 +61,11 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox5);
-            panel1.Location = new Point(-13, -21);
+            panel1.Location = new Point(1, 0);
             panel1.Margin = new Padding(2, 3, 2, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1192, 117);
-            panel1.TabIndex = 5;
+            panel1.Size = new Size(1240, 125);
+            panel1.TabIndex = 6;
             // 
             // panel4
             // 
@@ -80,14 +78,15 @@
             panel4.Location = new Point(187, 81);
             panel4.Margin = new Padding(2, 3, 2, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1003, 35);
+            panel4.Size = new Size(1060, 35);
             panel4.TabIndex = 7;
+            panel4.Paint += panel4_Paint;
             // 
             // linkLabel5
             // 
             linkLabel5.AutoSize = true;
             linkLabel5.LinkColor = Color.White;
-            linkLabel5.Location = new Point(809, 11);
+            linkLabel5.Location = new Point(851, 11);
             linkLabel5.Margin = new Padding(2, 0, 2, 0);
             linkLabel5.Name = "linkLabel5";
             linkLabel5.Size = new Size(172, 20);
@@ -130,7 +129,6 @@
             linkLabel2.TabIndex = 1;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Student Account Approval ";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel1
             // 
@@ -143,7 +141,6 @@
             linkLabel1.TabIndex = 0;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Homescreen";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // button2
             // 
@@ -179,6 +176,20 @@
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightYellow;
+            label1.Font = new Font("Segoe UI", 10F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Desktop;
+            label1.Location = new Point(593, 23);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(129, 23);
+            label1.TabIndex = 13;
+            label1.Text = "Concern Archive";
+            label1.Click += label1_Click;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.LightYellow;
@@ -186,106 +197,71 @@
             panel2.Controls.Add(dgComplaintList);
             panel2.Controls.Add(label1);
             panel2.ForeColor = SystemColors.ButtonHighlight;
-            panel2.Location = new Point(-22, 95);
+            panel2.Location = new Point(-19, 122);
             panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1199, 351);
-            panel2.TabIndex = 6;
+            panel2.Size = new Size(1278, 457);
+            panel2.TabIndex = 14;
             // 
             // dgComplaintList
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgComplaintList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { hdrName, hdrComplainID, hdrComplainType, hdrPriorityLevel, hdrOpen });
-            dgComplaintList.Location = new Point(270, 66);
+            dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { ComplainID, ComplainType, Progress });
+            dgComplaintList.Location = new Point(306, 94);
             dgComplaintList.Margin = new Padding(2, 3, 2, 3);
             dgComplaintList.Name = "dgComplaintList";
             dgComplaintList.RowHeadersWidth = 62;
             dgComplaintList.Size = new Size(688, 265);
             dgComplaintList.TabIndex = 13;
-            dgComplaintList.CellContentClick += dgComplaintList_CellContentClick_1;
-            // 
-            // hdrName
-            // 
-            hdrName.HeaderText = "Name";
-            hdrName.MinimumWidth = 6;
-            hdrName.Name = "hdrName";
-            hdrName.Width = 125;
-            // 
-            // hdrComplainID
-            // 
-            hdrComplainID.HeaderText = "Complain ID";
-            hdrComplainID.MinimumWidth = 6;
-            hdrComplainID.Name = "hdrComplainID";
-            hdrComplainID.Width = 125;
-            // 
-            // hdrComplainType
-            // 
-            hdrComplainType.HeaderText = "Complain Type";
-            hdrComplainType.MinimumWidth = 6;
-            hdrComplainType.Name = "hdrComplainType";
-            hdrComplainType.Width = 125;
-            // 
-            // hdrPriorityLevel
-            // 
-            hdrPriorityLevel.HeaderText = "Priority Level";
-            hdrPriorityLevel.Items.AddRange(new object[] { "Important - Urgent", "Important - Not Urgent", "Not important - Urgent", "Not important - Not Urgent" });
-            hdrPriorityLevel.MinimumWidth = 6;
-            hdrPriorityLevel.Name = "hdrPriorityLevel";
-            hdrPriorityLevel.Resizable = DataGridViewTriState.True;
-            hdrPriorityLevel.SortMode = DataGridViewColumnSortMode.Automatic;
-            hdrPriorityLevel.Width = 125;
-            // 
-            // hdrOpen
-            // 
-            hdrOpen.HeaderText = "Open";
-            hdrOpen.MinimumWidth = 6;
-            hdrOpen.Name = "hdrOpen";
-            hdrOpen.Text = "Open";
-            hdrOpen.Width = 125;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.LightYellow;
-            label1.Font = new Font("Segoe UI", 10F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.Desktop;
-            label1.Location = new Point(489, 15);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(186, 23);
-            label1.TabIndex = 12;
-            label1.Text = "Feedback/Concern Lists ";
             // 
             // panel3
             // 
             panel3.BackColor = Color.ForestGreen;
-            panel3.Location = new Point(-14, 443);
+            panel3.Location = new Point(-19, 571);
             panel3.Margin = new Padding(2, 3, 2, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1194, 107);
-            panel3.TabIndex = 7;
+            panel3.Size = new Size(1278, 132);
+            panel3.TabIndex = 15;
             // 
-            // pg9_ComplainList
+            // ComplainID
+            // 
+            ComplainID.HeaderText = "Complain ID";
+            ComplainID.MinimumWidth = 6;
+            ComplainID.Name = "ComplainID";
+            ComplainID.Width = 125;
+            // 
+            // ComplainType
+            // 
+            ComplainType.HeaderText = "Complain Type";
+            ComplainType.MinimumWidth = 6;
+            ComplainType.Name = "ComplainType";
+            ComplainType.Width = 125;
+            // 
+            // Progress
+            // 
+            Progress.HeaderText = "Progress ";
+            Progress.MinimumWidth = 6;
+            Progress.Name = "Progress";
+            Progress.Width = 125;
+            // 
+            // Complain_Archive
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1167, 535);
+            ClientSize = new Size(1236, 684);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(2, 3, 2, 3);
-            Name = "pg9_ComplainList";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "pg9_ComplainList";
-            Load += pg9_ComplainList_Load;
+            Name = "Complain_Archive";
+            Text = "Complain_Archive";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);
@@ -301,6 +277,7 @@
 
         private Panel panel1;
         private Panel panel4;
+        private LinkLabel linkLabel5;
         private LinkLabel linkLabel4;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;
@@ -308,15 +285,12 @@
         private Button button2;
         private Label label2;
         private PictureBox pictureBox5;
-        private Panel panel2;
-        private Panel panel3;
         private Label label1;
-        private LinkLabel linkLabel5;
+        private Panel panel2;
         private DataGridView dgComplaintList;
-        private DataGridViewTextBoxColumn hdrName;
-        private DataGridViewTextBoxColumn hdrComplainID;
-        private DataGridViewTextBoxColumn hdrComplainType;
-        private DataGridViewComboBoxColumn hdrPriorityLevel;
-        private DataGridViewButtonColumn hdrOpen;
+        private DataGridViewTextBoxColumn ComplainID;
+        private DataGridViewTextBoxColumn ComplainType;
+        private DataGridViewTextBoxColumn Progress;
+        private Panel panel3;
     }
 }
