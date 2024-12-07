@@ -68,5 +68,11 @@ namespace Project_TUA_FEEDBACK_HUB
         {
 
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Complain_Archive complain_Archive = new Complain_Archive();
+            complain_Archive.Show();
+        }
     }
 }

@@ -211,6 +211,7 @@
             button1.TabIndex = 5;
             button1.Text = "Mark as Resolved";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel6
             // 

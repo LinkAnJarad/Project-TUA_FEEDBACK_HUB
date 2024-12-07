@@ -13,37 +13,13 @@ namespace Project_TUA_FEEDBACK_HUB
 {
     public partial class pg6_AccountApproval : Form
     {
+        MySqlConnection connection = ConnectionDB.GetConnection();
 
-
-        static string server = "localhost";
-        static string port = "3306";
-        static string username = "root";
-        static string password = "";
-        static string database = "tuafms";
-
-        static string connectionString = $"server={server};port={port};username={username};password={password};database={database};";
-
-        public static MySqlConnection GetConnection()
-        {
-            MySqlConnection mySqlConnection = new MySqlConnection(connectionString);
-            try
-            {
-                mySqlConnection.Open();
-                return mySqlConnection;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Connection failed: {ex.Message}");
-                return null;
-            }
-        }
-
-        MySqlConnection connection = GetConnection();
 
         public pg6_AccountApproval()
         {
             InitializeComponent();
+            load_data();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -67,7 +43,7 @@ namespace Project_TUA_FEEDBACK_HUB
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
             {
                 conn.Open();
-                string query = @"SELECT * FROM useraccounts;";
+                string query = @"SELECT * FROM useraccounts WHERE act_status='Not approved';";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 // Use parameterized queries to prevent SQL injection
@@ -78,7 +54,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 {
                     string user_fname = reader["user_fname"].ToString();
                     string user_mname = reader["user_mname"].ToString();
-                    string user_lname = reader["user_lname"].ToString();
+                    string user_lname = reader["user_sname"].ToString();
                     string acct_number = reader["acct_number"].ToString();
                     string act_type = reader["act_type"].ToString();
                     string coll_acrnym = reader["coll_acrnym"].ToString();
@@ -108,7 +84,12 @@ namespace Project_TUA_FEEDBACK_HUB
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == approval_table.Columns["Data"].Index && e.RowIndex >= 0)
+            {
+                var account_number = approval_table.Rows[e.RowIndex].Cells["AccountNumber"].Value.ToString();
+                pg7_Registration2 viewdetails = new pg7_Registration2(account_number);
+                viewdetails.Show();
+            }
         }
     }
 }

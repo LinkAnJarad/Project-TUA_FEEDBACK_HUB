@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Complain_Archive));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel4 = new Panel();
@@ -43,10 +44,10 @@
             label1 = new Label();
             panel2 = new Panel();
             dgComplaintList = new DataGridView();
-            panel3 = new Panel();
             ComplainID = new DataGridViewTextBoxColumn();
             ComplainType = new DataGridViewTextBoxColumn();
             Progress = new DataGridViewTextBoxColumn();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -205,31 +206,30 @@
             // 
             // dgComplaintList
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgComplaintList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { ComplainID, ComplainType, Progress });
-            dgComplaintList.Location = new Point(306, 94);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Green;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgComplaintList.DefaultCellStyle = dataGridViewCellStyle2;
+            dgComplaintList.Location = new Point(438, 70);
             dgComplaintList.Margin = new Padding(2, 3, 2, 3);
             dgComplaintList.Name = "dgComplaintList";
             dgComplaintList.RowHeadersWidth = 62;
-            dgComplaintList.Size = new Size(688, 265);
+            dgComplaintList.Size = new Size(441, 349);
             dgComplaintList.TabIndex = 13;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.ForestGreen;
-            panel3.Location = new Point(-19, 571);
-            panel3.Margin = new Padding(2, 3, 2, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1278, 132);
-            panel3.TabIndex = 15;
             // 
             // ComplainID
             // 
@@ -251,6 +251,15 @@
             Progress.MinimumWidth = 6;
             Progress.Name = "Progress";
             Progress.Width = 125;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.ForestGreen;
+            panel3.Location = new Point(-19, 571);
+            panel3.Margin = new Padding(2, 3, 2, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1278, 132);
+            panel3.TabIndex = 15;
             // 
             // Complain_Archive
             // 

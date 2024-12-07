@@ -48,11 +48,8 @@ namespace Project_TUA_FEEDBACK_HUB
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void login()
         {
-            
-           
-            
             string username = emailTXTbox.Text;
             string password = passTXTbox.Text;
             //MySqlConnection connection = GetConnection();
@@ -83,9 +80,28 @@ namespace Project_TUA_FEEDBACK_HUB
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            login();
+        }
+
         private void pg2_Log_in_Your_Account_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void passTXTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Call your desired function here
+                login();
+
+                // Optionally prevent the default behavior (e.g., the beep sound)
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 

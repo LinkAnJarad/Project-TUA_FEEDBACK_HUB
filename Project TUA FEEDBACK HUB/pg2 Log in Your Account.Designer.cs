@@ -53,9 +53,10 @@
             panel1.BackColor = Color.ForestGreen;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-33, 0);
+            panel1.Location = new Point(-26, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1435, 108);
+            panel1.Size = new Size(1148, 86);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
@@ -63,18 +64,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SimSun", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(603, 38);
+            label1.Location = new Point(482, 30);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(262, 22);
+            label1.Size = new Size(240, 19);
             label1.TabIndex = 1;
             label1.Text = "TUA FEEDBACK SERVICE ";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(17, -1);
+            pictureBox1.Location = new Point(14, -1);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(181, 109);
+            pictureBox1.Size = new Size(145, 87);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -82,9 +85,10 @@
             // panel3
             // 
             panel3.BackColor = Color.ForestGreen;
-            panel3.Location = new Point(-33, 515);
+            panel3.Location = new Point(-26, 412);
+            panel3.Margin = new Padding(2, 2, 2, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1435, 108);
+            panel3.Size = new Size(1148, 86);
             panel3.TabIndex = 3;
             // 
             // panel2
@@ -99,16 +103,18 @@
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(-16, 104);
+            panel2.Location = new Point(-13, 83);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1408, 427);
+            panel2.Size = new Size(1126, 342);
             panel2.TabIndex = 4;
             // 
             // emailTXTbox
             // 
-            emailTXTbox.Location = new Point(421, 110);
+            emailTXTbox.Location = new Point(337, 88);
+            emailTXTbox.Margin = new Padding(2, 2, 2, 2);
             emailTXTbox.Name = "emailTXTbox";
-            emailTXTbox.Size = new Size(591, 31);
+            emailTXTbox.Size = new Size(474, 27);
             emailTXTbox.TabIndex = 9;
             // 
             // linkLabel2
@@ -117,9 +123,10 @@
             linkLabel2.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Italic, GraphicsUnit.Point, 0);
             linkLabel2.ForeColor = SystemColors.ControlText;
             linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(1215, 383);
+            linkLabel2.Location = new Point(972, 306);
+            linkLabel2.Margin = new Padding(2, 0, 2, 0);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(150, 27);
+            linkLabel2.Size = new Size(133, 22);
             linkLabel2.TabIndex = 7;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Create Account ";
@@ -130,9 +137,10 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Italic, GraphicsUnit.Point, 0);
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(76, 383);
+            linkLabel1.Location = new Point(61, 306);
+            linkLabel1.Margin = new Padding(2, 0, 2, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(159, 27);
+            linkLabel1.Size = new Size(136, 22);
             linkLabel1.TabIndex = 6;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password";
@@ -142,9 +150,10 @@
             // 
             button1.BackColor = SystemColors.ControlText;
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(900, 295);
+            button1.Location = new Point(720, 236);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(90, 27);
             button1.TabIndex = 5;
             button1.Text = "Log In ";
             button1.UseVisualStyleBackColor = false;
@@ -152,28 +161,32 @@
             // 
             // passTXTbox
             // 
-            passTXTbox.Location = new Point(421, 242);
+            passTXTbox.Location = new Point(337, 194);
+            passTXTbox.Margin = new Padding(2, 2, 2, 2);
             passTXTbox.Name = "passTXTbox";
             passTXTbox.PasswordChar = '*';
-            passTXTbox.Size = new Size(591, 31);
+            passTXTbox.Size = new Size(474, 27);
             passTXTbox.TabIndex = 4;
             passTXTbox.UseSystemPasswordChar = true;
+            passTXTbox.KeyDown += passTXTbox_KeyDown;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(321, 242);
+            label4.Location = new Point(257, 194);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(96, 25);
+            label4.Size = new Size(77, 20);
             label4.TabIndex = 2;
             label4.Text = "Password: ";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(321, 113);
+            label3.Location = new Point(257, 90);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(63, 25);
+            label3.Size = new Size(53, 20);
             label3.TabIndex = 1;
             label3.Text = "Email: ";
             // 
@@ -183,21 +196,23 @@
             label2.BackColor = SystemColors.InactiveCaptionText;
             label2.Font = new Font("Sitka Banner", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(610, 7);
+            label2.Location = new Point(488, 6);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(238, 40);
+            label2.Size = new Size(204, 35);
             label2.TabIndex = 0;
             label2.Text = "Log in Your Account ";
             label2.Click += label2_Click;
             // 
             // pg2_Log_in_Your_Account
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1369, 617);
+            ClientSize = new Size(1095, 494);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "pg2_Log_in_Your_Account";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "pg2_Log_in_Your_Account";

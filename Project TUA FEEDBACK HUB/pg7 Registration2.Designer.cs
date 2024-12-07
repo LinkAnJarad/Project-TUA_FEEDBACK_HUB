@@ -40,21 +40,19 @@
             label2 = new Label();
             pictureBox5 = new PictureBox();
             panel2 = new Panel();
-            comboBox1 = new ComboBox();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            college = new Label();
+            password = new Label();
+            accounttype = new Label();
+            lastname = new Label();
+            accountnumber = new Label();
+            email = new Label();
+            middlename = new Label();
+            firstname = new Label();
             label11 = new Label();
-            label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -78,9 +76,10 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox5);
-            panel1.Location = new Point(-30, -30);
+            panel1.Location = new Point(-24, -24);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1490, 144);
+            panel1.Size = new Size(1192, 115);
             panel1.TabIndex = 5;
             // 
             // panel4
@@ -91,18 +90,20 @@
             panel4.Controls.Add(linkLabel3);
             panel4.Controls.Add(linkLabel2);
             panel4.Controls.Add(linkLabel1);
-            panel4.Location = new Point(235, 102);
+            panel4.Location = new Point(188, 82);
+            panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1255, 43);
+            panel4.Size = new Size(1004, 34);
             panel4.TabIndex = 7;
             // 
             // linkLabel5
             // 
             linkLabel5.AutoSize = true;
             linkLabel5.LinkColor = Color.White;
-            linkLabel5.Location = new Point(1029, 16);
+            linkLabel5.Location = new Point(823, 13);
+            linkLabel5.Margin = new Padding(2, 0, 2, 0);
             linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(187, 25);
+            linkLabel5.Size = new Size(157, 20);
             linkLabel5.TabIndex = 4;
             linkLabel5.TabStop = true;
             linkLabel5.Text = "Analytical Complaints ";
@@ -111,9 +112,10 @@
             // 
             linkLabel4.AutoSize = true;
             linkLabel4.LinkColor = Color.White;
-            linkLabel4.Location = new Point(783, 14);
+            linkLabel4.Location = new Point(626, 11);
+            linkLabel4.Margin = new Padding(2, 0, 2, 0);
             linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(164, 25);
+            linkLabel4.Size = new Size(136, 20);
             linkLabel4.TabIndex = 3;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Complain Archives ";
@@ -122,9 +124,10 @@
             // 
             linkLabel3.AutoSize = true;
             linkLabel3.LinkColor = Color.White;
-            linkLabel3.Location = new Point(538, 14);
+            linkLabel3.Location = new Point(430, 11);
+            linkLabel3.Margin = new Padding(2, 0, 2, 0);
             linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(132, 25);
+            linkLabel3.Size = new Size(109, 20);
             linkLabel3.TabIndex = 2;
             linkLabel3.TabStop = true;
             linkLabel3.Text = "Complain Lists ";
@@ -133,9 +136,10 @@
             // 
             linkLabel2.AutoSize = true;
             linkLabel2.LinkColor = Color.White;
-            linkLabel2.Location = new Point(249, 14);
+            linkLabel2.Location = new Point(199, 11);
+            linkLabel2.Margin = new Padding(2, 0, 2, 0);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(226, 25);
+            linkLabel2.Size = new Size(187, 20);
             linkLabel2.TabIndex = 1;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Student Account Approval ";
@@ -144,9 +148,10 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(42, 14);
+            linkLabel1.Location = new Point(34, 11);
+            linkLabel1.Margin = new Padding(2, 0, 2, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(111, 25);
+            linkLabel1.Size = new Size(92, 20);
             linkLabel1.TabIndex = 0;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Homescreen";
@@ -155,9 +160,10 @@
             // 
             button2.BackColor = SystemColors.ControlText;
             button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(1339, 51);
+            button2.Location = new Point(1071, 41);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(90, 27);
             button2.TabIndex = 6;
             button2.Text = "Log Out ";
             button2.UseVisualStyleBackColor = false;
@@ -166,18 +172,20 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SimSun", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(601, 51);
+            label2.Location = new Point(481, 41);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(262, 22);
+            label2.Size = new Size(240, 19);
             label2.TabIndex = 1;
             label2.Text = "TUA FEEDBACK SERVICE ";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(27, 26);
+            pictureBox5.Location = new Point(22, 21);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(210, 128);
+            pictureBox5.Size = new Size(168, 102);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
@@ -186,101 +194,137 @@
             // 
             panel2.BackColor = Color.LightYellow;
             panel2.BackgroundImageLayout = ImageLayout.Center;
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox9);
-            panel2.Controls.Add(textBox8);
-            panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
+            panel2.Controls.Add(college);
+            panel2.Controls.Add(password);
+            panel2.Controls.Add(accounttype);
+            panel2.Controls.Add(lastname);
+            panel2.Controls.Add(accountnumber);
+            panel2.Controls.Add(email);
+            panel2.Controls.Add(middlename);
+            panel2.Controls.Add(firstname);
             panel2.Controls.Add(label11);
-            panel2.Controls.Add(label10);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(panel5);
-            panel2.Location = new Point(-40, 117);
+            panel2.Location = new Point(-32, 94);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1573, 452);
+            panel2.Size = new Size(1258, 362);
             panel2.TabIndex = 6;
             // 
-            // comboBox1
+            // college
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(181, 198);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(228, 33);
-            comboBox1.TabIndex = 18;
+            college.AutoSize = true;
+            college.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            college.Location = new Point(949, 254);
+            college.Margin = new Padding(2, 0, 2, 0);
+            college.Name = "college";
+            college.Size = new Size(86, 20);
+            college.TabIndex = 26;
+            college.Text = "First Name: ";
             // 
-            // textBox9
+            // password
             // 
-            textBox9.Location = new Point(1177, 318);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(281, 31);
-            textBox9.TabIndex = 17;
+            password.AutoSize = true;
+            password.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            password.Location = new Point(132, 250);
+            password.Margin = new Padding(2, 0, 2, 0);
+            password.Name = "password";
+            password.Size = new Size(86, 20);
+            password.TabIndex = 25;
+            password.Text = "First Name: ";
             // 
-            // textBox8
+            // accounttype
             // 
-            textBox8.Location = new Point(597, 312);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(276, 31);
-            textBox8.TabIndex = 16;
+            accounttype.AutoSize = true;
+            accounttype.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            accounttype.Location = new Point(144, 161);
+            accounttype.Margin = new Padding(2, 0, 2, 0);
+            accounttype.Name = "accounttype";
+            accounttype.Size = new Size(86, 20);
+            accounttype.TabIndex = 24;
+            accounttype.Text = "First Name: ";
             // 
-            // textBox7
+            // lastname
             // 
-            textBox7.Location = new Point(154, 306);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(255, 31);
-            textBox7.TabIndex = 15;
+            lastname.AutoSize = true;
+            lastname.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lastname.Location = new Point(907, 66);
+            lastname.Margin = new Padding(2, 0, 2, 0);
+            lastname.Name = "lastname";
+            lastname.Size = new Size(86, 20);
+            lastname.TabIndex = 23;
+            lastname.Text = "First Name: ";
             // 
-            // textBox6
+            // accountnumber
             // 
-            textBox6.Location = new Point(1177, 201);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(284, 31);
-            textBox6.TabIndex = 14;
+            accountnumber.AutoSize = true;
+            accountnumber.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            accountnumber.Location = new Point(949, 161);
+            accountnumber.Margin = new Padding(2, 0, 2, 0);
+            accountnumber.Name = "accountnumber";
+            accountnumber.Size = new Size(86, 20);
+            accountnumber.TabIndex = 22;
+            accountnumber.Text = "First Name: ";
             // 
-            // textBox5
+            // email
             // 
-            textBox5.Location = new Point(597, 192);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(276, 31);
-            textBox5.TabIndex = 13;
+            email.AutoSize = true;
+            email.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            email.Location = new Point(489, 158);
+            email.Margin = new Padding(2, 0, 2, 0);
+            email.Name = "email";
+            email.Size = new Size(86, 20);
+            email.TabIndex = 21;
+            email.Text = "First Name: ";
+            // 
+            // middlename
+            // 
+            middlename.AutoSize = true;
+            middlename.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            middlename.Location = new Point(451, 66);
+            middlename.Margin = new Padding(2, 0, 2, 0);
+            middlename.Name = "middlename";
+            middlename.Size = new Size(86, 20);
+            middlename.TabIndex = 20;
+            middlename.Text = "First Name: ";
+            // 
+            // firstname
+            // 
+            firstname.AutoSize = true;
+            firstname.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            firstname.Location = new Point(132, 59);
+            firstname.Margin = new Padding(2, 0, 2, 0);
+            firstname.Name = "firstname";
+            firstname.Size = new Size(86, 20);
+            firstname.TabIndex = 19;
+            firstname.Text = "First Name: ";
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(1018, 318);
+            label11.Location = new Point(814, 254);
+            label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new Size(165, 25);
+            label11.Size = new Size(134, 20);
             label11.TabIndex = 0;
             label11.Text = "College / Program: ";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(436, 312);
-            label10.Name = "label10";
-            label10.Size = new Size(157, 25);
-            label10.TabIndex = 11;
-            label10.Text = "Confirm Password:";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.Location = new Point(52, 312);
+            label9.Location = new Point(42, 250);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(91, 27);
+            label9.Size = new Size(75, 22);
             label9.TabIndex = 10;
             label9.Text = "Password:";
             // 
@@ -288,9 +332,10 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(1031, 201);
+            label8.Location = new Point(825, 161);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(148, 25);
+            label8.Size = new Size(120, 20);
             label8.TabIndex = 9;
             label8.Text = "Account Number:";
             // 
@@ -298,9 +343,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.Location = new Point(436, 198);
+            label7.Location = new Point(349, 158);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(162, 25);
+            label7.Size = new Size(132, 20);
             label7.TabIndex = 8;
             label7.Text = "TUA Email Address:";
             // 
@@ -308,40 +354,21 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(52, 201);
+            label6.Location = new Point(42, 161);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(121, 25);
+            label6.Size = new Size(98, 20);
             label6.TabIndex = 7;
             label6.Text = "Account Type:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(1133, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(325, 31);
-            textBox3.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(565, 80);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(308, 31);
-            textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(154, 74);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(244, 31);
-            textBox1.TabIndex = 4;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(1028, 83);
+            label5.Location = new Point(822, 66);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(100, 25);
+            label5.Size = new Size(81, 20);
             label5.TabIndex = 3;
             label5.Text = "Last Name:";
             // 
@@ -349,9 +376,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(436, 80);
+            label4.Location = new Point(349, 64);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(123, 25);
+            label4.Size = new Size(98, 20);
             label4.TabIndex = 2;
             label4.Text = "Middle Name:";
             // 
@@ -359,9 +387,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(52, 74);
+            label3.Location = new Point(42, 59);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(107, 25);
+            label3.Size = new Size(86, 20);
             label3.TabIndex = 1;
             label3.Text = "First Name: ";
             // 
@@ -369,9 +398,10 @@
             // 
             panel5.BackColor = SystemColors.Desktop;
             panel5.Controls.Add(label1);
-            panel5.Location = new Point(611, 4);
+            panel5.Location = new Point(489, 3);
+            panel5.Margin = new Padding(2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(262, 48);
+            panel5.Size = new Size(210, 38);
             panel5.TabIndex = 0;
             // 
             // label1
@@ -379,9 +409,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(19, 10);
+            label1.Location = new Point(15, 8);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(208, 25);
+            label1.Size = new Size(169, 20);
             label1.TabIndex = 0;
             label1.Text = "Registration Information ";
             // 
@@ -390,18 +421,20 @@
             panel3.BackColor = Color.ForestGreen;
             panel3.Controls.Add(button3);
             panel3.Controls.Add(button1);
-            panel3.Location = new Point(-2, 557);
+            panel3.Location = new Point(-2, 446);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1435, 211);
+            panel3.Size = new Size(1148, 169);
             panel3.TabIndex = 7;
             // 
             // button3
             // 
             button3.BackColor = SystemColors.Desktop;
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(980, 18);
+            button3.Location = new Point(784, 14);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(112, 34);
+            button3.Size = new Size(90, 27);
             button3.TabIndex = 1;
             button3.Text = "Decline";
             button3.UseVisualStyleBackColor = false;
@@ -410,21 +443,24 @@
             // 
             button1.BackColor = SystemColors.Desktop;
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(398, 18);
+            button1.Location = new Point(318, 14);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(90, 27);
             button1.TabIndex = 0;
             button1.Text = "Approve ";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pg7_Registration2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 679);
+            ClientSize = new Size(1144, 543);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(2);
             Name = "pg7_Registration2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "pg7_Registration2";
@@ -460,23 +496,21 @@
         private Label label8;
         private Label label7;
         private Label label6;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label1;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
         private Label label11;
-        private Label label10;
-        private Label label9;
-        private ComboBox comboBox1;
         private Button button3;
         private Button button1;
+        private Label label9;
+        private Label college;
+        private Label password;
+        private Label accounttype;
+        private Label lastname;
+        private Label accountnumber;
+        private Label email;
+        private Label middlename;
+        private Label firstname;
     }
 }
