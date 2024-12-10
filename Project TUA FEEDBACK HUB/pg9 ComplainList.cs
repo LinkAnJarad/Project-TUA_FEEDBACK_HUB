@@ -49,11 +49,11 @@ namespace Project_TUA_FEEDBACK_HUB
                         DataGridViewRow row = dgComplaintList.Rows[rowIndex];
 
                         // Populate the row with data from the reader
-                        row.Cells["hdrComplainID"].Value = reader["fdbk_refno"];
-                        row.Cells["hdrComplainType"].Value = reader["fdbk_type"];
-                        row.Cells["hdrName"].Value = reader["name"];
+                        row.Cells["hdrComplainID"].Value = reader.IsDBNull(reader.GetOrdinal("fdbk_refno")) ? DBNull.Value : reader["fdbk_refno"];
+                        row.Cells["hdrComplainType"].Value = reader.IsDBNull(reader.GetOrdinal("fdbk_type")) ? DBNull.Value : reader["fdbk_type"];
+                        row.Cells["hdrName"].Value = reader.IsDBNull(reader.GetOrdinal("name")) ? "Unknown" : reader["name"];
                         row.Cells["hdrOpen"].Value = "Open";
-                        row.Cells["hdrPriorityLevel"].Value = reader["fdbk_priority"]; // Set your default value heregdg
+                        row.Cells["hdrPriorityLevel"].Value = reader.IsDBNull(reader.GetOrdinal("fdbk_priority")) ? DBNull.Value : reader["fdbk_priority"];
                     }
                 }
             }

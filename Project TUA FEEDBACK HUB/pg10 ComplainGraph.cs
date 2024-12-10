@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ namespace Project_TUA_FEEDBACK_HUB
 {
     public partial class pg10_ComplainGraph : Form
     {
-        
+
 
         MySqlConnection connection = ConnectionDB.GetConnection();
         string connectionstring = ConnectionDB.connectionString;
@@ -52,6 +54,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbCAHS.Maximum = total_feedback;
                 pbCAHS.Value = collegerec;
+                cahsval.Text = collegerec.ToString();
             }
 
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
@@ -67,6 +70,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbCEIS.Maximum = total_feedback;
                 pbCEIS.Value = collegerec;
+                ceisval.Text = collegerec.ToString();
             }
 
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
@@ -82,6 +86,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbSLCN.Maximum = total_feedback;
                 pbSLCN.Value = collegerec;
+                slcnval.Text = collegerec.ToString();
             }
 
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
@@ -97,6 +102,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbCMT.Maximum = total_feedback;
                 pbCMT.Value = collegerec;
+                cmtval.Text = collegerec.ToString();
             }
 
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
@@ -112,6 +118,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbIBAM.Maximum = total_feedback;
                 pbIBAM.Value = collegerec;
+                ibamval.Text = collegerec.ToString();
             }
 
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
@@ -127,6 +134,7 @@ namespace Project_TUA_FEEDBACK_HUB
                 MySqlDataReader reader = cmd.ExecuteReader();
                 pbCASE.Maximum = total_feedback;
                 pbCASE.Value = collegerec;
+                caseval.Text = collegerec.ToString();
             }
 
 
@@ -192,6 +200,56 @@ namespace Project_TUA_FEEDBACK_HUB
                 //pbSLCN.Maximum = 10;
                 MessageBox.Show(collegerec + "");
             }
+        }
+
+        private void btnreportSLCN_Click(object sender, EventArgs e)
+        {
+
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=SLCN";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void btnreportCEIS_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=CEIS";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void btnreportCASE_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=CASE";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void btnreportCMT_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=CMT";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void btnreportIBAM_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=IBAM";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void btnreportCAHS_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=CAHS";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String URLREPORT = $"http://{ConnectionDB.IP}/tuafms/report.php?college=ALL";
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {URLREPORT}") { CreateNoWindow = true });
+
         }
     }
 }

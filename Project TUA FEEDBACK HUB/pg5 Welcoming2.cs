@@ -61,7 +61,6 @@ namespace Project_TUA_FEEDBACK_HUB
         {
             pg10_ComplainGraph ComplainPage = new pg10_ComplainGraph();
             ComplainPage.Show();
-            this.Close();
         }
 
         private void pg5_Welcoming2_Load(object sender, EventArgs e)

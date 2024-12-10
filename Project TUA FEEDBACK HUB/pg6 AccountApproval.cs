@@ -43,7 +43,7 @@ namespace Project_TUA_FEEDBACK_HUB
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
             {
                 conn.Open();
-                string query = @"SELECT * FROM useraccounts WHERE act_status='Not approved';";
+                string query = @"SELECT * FROM useraccounts WHERE act_status!='Approved';";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 // Use parameterized queries to prevent SQL injection

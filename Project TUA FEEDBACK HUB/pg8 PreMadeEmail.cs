@@ -81,7 +81,6 @@ namespace Project_TUA_FEEDBACK_HUB
             using (MySqlConnection conn = new MySqlConnection(connection.ConnectionString))
             {
                 conn.Open();
-                conn.Open();
                 string query = @"UPDATE feedback SET fdbk_status='Resolved' WHERE fdbk_refno=@refno;";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@refno", refno);

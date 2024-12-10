@@ -42,9 +42,9 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            resolvedbtn = new Button();
             panel6 = new Panel();
-            button2 = new Button();
+            replybtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -200,42 +200,42 @@
             label2.TabIndex = 0;
             label2.Text = "Feed back  ";
             // 
-            // button1
+            // resolvedbtn
             // 
-            button1.BackColor = SystemColors.ControlText;
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(446, 17);
-            button1.Margin = new Padding(2, 3, 2, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(134, 52);
-            button1.TabIndex = 5;
-            button1.Text = "Mark as Resolved";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            resolvedbtn.BackColor = SystemColors.ControlText;
+            resolvedbtn.ForeColor = SystemColors.ControlLightLight;
+            resolvedbtn.Location = new Point(446, 17);
+            resolvedbtn.Margin = new Padding(2, 3, 2, 3);
+            resolvedbtn.Name = "resolvedbtn";
+            resolvedbtn.Size = new Size(134, 52);
+            resolvedbtn.TabIndex = 5;
+            resolvedbtn.Text = "Mark as Resolved";
+            resolvedbtn.UseVisualStyleBackColor = false;
+            resolvedbtn.Click += button1_Click;
             // 
             // panel6
             // 
             panel6.BackColor = Color.ForestGreen;
-            panel6.Controls.Add(button2);
-            panel6.Controls.Add(button1);
+            panel6.Controls.Add(replybtn);
+            panel6.Controls.Add(resolvedbtn);
             panel6.Location = new Point(-66, 437);
             panel6.Margin = new Padding(2, 3, 2, 3);
             panel6.Name = "panel6";
             panel6.Size = new Size(1245, 104);
             panel6.TabIndex = 11;
             // 
-            // button2
+            // replybtn
             // 
-            button2.BackColor = SystemColors.ControlText;
-            button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(678, 17);
-            button2.Margin = new Padding(2, 3, 2, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 52);
-            button2.TabIndex = 6;
-            button2.Text = "Make a reply";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            replybtn.BackColor = SystemColors.ControlText;
+            replybtn.ForeColor = SystemColors.ControlLightLight;
+            replybtn.Location = new Point(678, 17);
+            replybtn.Margin = new Padding(2, 3, 2, 3);
+            replybtn.Name = "replybtn";
+            replybtn.Size = new Size(134, 52);
+            replybtn.TabIndex = 6;
+            replybtn.Text = "Make a reply";
+            replybtn.UseVisualStyleBackColor = false;
+            replybtn.Click += button2_Click;
             // 
             // Feedback_Form
             // 
@@ -263,14 +263,14 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Panel panel2;
-        private Button button1;
+        private Button resolvedbtn;
         private Label label3;
         private Label label2;
         private Label label4;
         private Label label6;
         private Label label5;
         private Panel panel6;
-        private Button button2;
+        private Button replybtn;
         private Label lblEmail;
         private Label lblInquiry;
         private Label lblCategory;

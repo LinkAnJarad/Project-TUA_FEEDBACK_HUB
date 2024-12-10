@@ -55,8 +55,21 @@ namespace Project_TUA_FEEDBACK_HUB
                         row.Cells["ComplainID"].Value = reader["fdbk_refno"];
                         row.Cells["ComplainType"].Value = reader["fdbk_type"];
                         row.Cells["Progress"].Value = reader["fdbk_status"];
+                        row.Cells["View"].Value = "View";
                     }
                 }
+            }
+        }
+
+        private void dgComplaintList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgComplaintList.Columns["View"].Index && e.RowIndex >= 0)
+            {
+                // Retrieve the value of hdrComplainID from the same row
+                var complainID = dgComplaintList.Rows[e.RowIndex].Cells["ComplainID"].Value.ToString();
+                Feedback_Form feedbackform = new Feedback_Form(complainID, "_archive");
+
+                feedbackform.Show();   
             }
         }
     }

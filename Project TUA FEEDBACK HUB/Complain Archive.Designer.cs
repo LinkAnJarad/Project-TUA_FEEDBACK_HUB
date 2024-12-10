@@ -47,6 +47,7 @@
             ComplainID = new DataGridViewTextBoxColumn();
             ComplainType = new DataGridViewTextBoxColumn();
             Progress = new DataGridViewTextBoxColumn();
+            View = new DataGridViewButtonColumn();
             panel3 = new Panel();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -215,21 +216,22 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgComplaintList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgComplaintList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { ComplainID, ComplainType, Progress });
+            dgComplaintList.Columns.AddRange(new DataGridViewColumn[] { ComplainID, ComplainType, Progress, View });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.Green;
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgComplaintList.DefaultCellStyle = dataGridViewCellStyle2;
-            dgComplaintList.Location = new Point(438, 70);
+            dgComplaintList.Location = new Point(366, 66);
             dgComplaintList.Margin = new Padding(2, 3, 2, 3);
             dgComplaintList.Name = "dgComplaintList";
             dgComplaintList.RowHeadersWidth = 62;
-            dgComplaintList.Size = new Size(441, 349);
+            dgComplaintList.Size = new Size(566, 349);
             dgComplaintList.TabIndex = 13;
+            dgComplaintList.CellContentClick += dgComplaintList_CellContentClick;
             // 
             // ComplainID
             // 
@@ -251,6 +253,13 @@
             Progress.MinimumWidth = 6;
             Progress.Name = "Progress";
             Progress.Width = 125;
+            // 
+            // View
+            // 
+            View.HeaderText = "View";
+            View.MinimumWidth = 6;
+            View.Name = "View";
+            View.Width = 125;
             // 
             // panel3
             // 
@@ -301,5 +310,6 @@
         private DataGridViewTextBoxColumn ComplainType;
         private DataGridViewTextBoxColumn Progress;
         private Panel panel3;
+        private DataGridViewButtonColumn View;
     }
 }
