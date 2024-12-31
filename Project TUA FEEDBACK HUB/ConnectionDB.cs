@@ -9,7 +9,7 @@ namespace Project_TUA_FEEDBACK_HUB
 {
     public static class ConnectionDB
     {
-        public static string IP = "192.168.43.42";
+        public static string IP = "192.168.254.118";
         public static string server = "localhost";
         public static string port = "3306";
         public static string username = "jandrik";
